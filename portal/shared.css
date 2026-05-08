@@ -1,0 +1,192 @@
+/* Stili condivisi per i componenti del portale */
+
+.btn-back-home {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 15px;
+    position: relative;
+}
+
+.btn-back-home:hover {
+    background: var(--accent-primary, #2ecc71);
+    transform: scale(1.1) rotate(-5deg);
+    border-color: transparent;
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+}
+
+/* Semplice tooltip custom via attributo title (stile browser) o possiamo farlo custom */
+/* Per ora usiamo quello del browser che è più pulito, ma aggiungiamo una classe per il contenitore del titolo */
+
+.pagina h1 {
+    display: flex;
+    align-items: center;
+}
+
+.highlight {
+    color: #2ecc71;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(46, 204, 113, 0.6);
+}
+
+/* SEARCH BAR CONDIVISA STILE GOOGLE */
+.campo-ricerca-condiviso {
+    margin-left: auto;
+}
+
+.barra-stile-google {
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 30px;
+    padding: 6px 12px;
+    width: 450px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.barra-stile-google:focus-within {
+    border-color: #2ecc71;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.15);
+}
+
+.icona-ricerca-condivisa {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #888;
+}
+
+.barra-stile-google input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 8px 0;
+}
+
+.barra-stile-google button {
+    background: transparent;
+    border: none;
+    color: #aaa;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 20px;
+    transition: all 0.2s;
+}
+
+.barra-stile-google button:hover {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+/* TASTI AZIONE NELLE TABELLE (ICONE) */
+.btn-azione {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1.2rem;
+    margin-right: 5px;
+    padding: 0;
+}
+
+.btn-azione:hover {
+    transform: translateY(-2px);
+    background: rgba(46, 204, 113, 0.1);
+    border-color: #2ecc71;
+}
+
+.btn-azione.btn-read:hover { border-color: #3498db; background: rgba(52, 152, 219, 0.1); }
+.btn-azione.btn-edit:hover { border-color: #f1c40f; background: rgba(241, 196, 15, 0.1); }
+.btn-azione.btn-delete:hover { border-color: #e74c3c; background: rgba(231, 76, 60, 0.1); }
+
+/* SISTEMA DI NOTIFICHE TOAST */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    background: #1e1e1e;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #2ecc71;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 250px;
+    animation: slideInRight 0.3s ease-out, fadeOut 0.5s 2.5s forwards;
+    pointer-events: none;
+}
+
+.toast.error {
+    border-left-color: #e74c3c;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; transform: translateY(-10px); }
+}
+
+/* FIRMA D'AUTORE IN BASSO A DESTRA */
+.signature-container {
+    position: fixed;
+    bottom: 0;
+    right: -20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.signature-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: white;
+    letter-spacing: -2px;
+    margin-right: -10px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.signature-image {
+    max-height: 200px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}

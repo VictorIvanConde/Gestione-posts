@@ -1,13 +1,6 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "lib": ["DOM", "ESNext"],
-    "moduleResolution": "node",
-    "outDir": "./app-post",
-    "strict": true,
-    "skipLibCheck": true,
-    "sourceMap": true
-  },
-  "include": ["Typescript.ts"]
+  "files": [],
+  "references": [
+    { "path": "./portal" }
+  ]
 }

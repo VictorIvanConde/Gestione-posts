@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="src/app.css">
+</head>
+
+<body>
+    <div class="pagina">
+        <h1>Dashboard Admin</h1>
+
+        <nav class="menu">
+            <button class="menu-btn attivo" data-sezione="posts">Post</button>
+            <button class="menu-btn" data-sezione="comments">Commenti</button>
+            <button class="menu-btn" data-sezione="users">Utenti</button>
+            <button class="menu-btn" data-sezione="roles">Ruoli</button>
+            <button class="menu-btn" data-sezione="trash">♻️</button>
+        </nav>
+
+        <section id="contenuto">
+            <p>⏳ Caricamento...</p>
+        </section>
+    </div>
+
+    <!-- Script entry point: puntiamo al file COMPILATO (.js) -->
+    <script type="module" src="dist/app.js"></script>
+</body>
+
+</html>

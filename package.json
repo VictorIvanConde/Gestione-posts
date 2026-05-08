@@ -1,0 +1,7 @@
+{
+  "name": "dashboard-project",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "start /b npx -y json-server@0.17.4 --watch db.json & npx -p typescript tsc -b -w"
+  }
+}
