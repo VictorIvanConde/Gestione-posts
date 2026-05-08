@@ -11,10 +11,7 @@ import { Pagination } from "../../../../../shared/components/pagination.js";
 import { Logic } from "../../../../../shared/utils/logic.js";
 import { Toast } from "../../../../../shared/utils/helpers.js";
 import { AdminState } from "../../../types/state.js";
-
-function isUtente(item: Utente | Role): item is Utente {
-    return (item as Utente).email !== undefined;
-}
+import { isUtente } from "../../../../../shared/utils/logic.js";
 
 // gestisco la pagina degli utenti e dei ruoli
 // a seconda della sezione attiva mostro dati diversi

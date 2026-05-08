@@ -1,8 +1,7 @@
-// componente per mostrare la firma d'autore in basso a destra
-// include l'immagine manga e le iniziali V.I.C.
-
+// componente firma d'autore esclusivo della home del portale
+// mostra l'immagine manga e le iniziali V.I.C. in basso a destra
 export const Signature = {
-    render(): string {
+    render() {
         return `
             <div class="signature-container">
                 <span class="signature-text">V.I.C.</span>
@@ -11,3 +10,4 @@ export const Signature = {
         `;
     }
 };
+//# sourceMappingURL=signature.js.map

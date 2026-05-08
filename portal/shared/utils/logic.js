@@ -22,3 +22,13 @@ export const Logic = {
         return trovato ? (trovato.name || trovato.title || fallback) : fallback;
     }
 };
+// type guard per verificare se un elemento è un utente
+// usata nel cestino e nella pagina utenti per discriminare i tipi
+export function isUtente(item) {
+    return item.email !== undefined && item.roleId !== undefined;
+}
+// type guard per verificare se un elemento è un commento
+// usata nel cestino per distinguere i commenti dai post e dai ruoli
+export function isCommento(item) {
+    return item.postId !== undefined && item.body !== undefined;
+}

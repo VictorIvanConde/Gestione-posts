@@ -3,7 +3,7 @@
 // classe principale del portale
 // ha la responsabilità di generare e mostrare
 // le sezioni disponibili all'utente
-import { Signature } from "../shared/components/signature.js";
+import { Signature } from "./signature.js";
 class Portal {
     containerId;
     // definisco le opzioni disponibili del portale

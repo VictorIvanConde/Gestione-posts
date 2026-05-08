@@ -12,14 +12,7 @@ import { Pagination } from "../../../../../shared/components/pagination.js";
 import { Logic } from "../../../../../shared/utils/logic.js";
 import { Tabs } from "../../../commons/tabs.js";
 import { AdminState } from "../../../types/state.js";
-
-function isUtente(item: Post | Utente | Role | Commento): item is Utente {
-    return (item as Utente).email !== undefined && (item as Utente).roleId !== undefined;
-}
-
-function isCommento(item: Post | Utente | Role | Commento): item is Commento {
-    return (item as Commento).postId !== undefined && (item as Commento).body !== undefined;
-}
+import { isUtente, isCommento } from "../../../../../shared/utils/logic.js";
 
 type TrashItem = Post | Utente | Role | Commento;
 

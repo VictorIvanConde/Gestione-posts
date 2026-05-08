@@ -8,12 +8,7 @@ import { Header } from "../../../components/header.js";
 import { Modal } from "../../../commons/modal.js";
 import { Pagination } from "../../../../../shared/components/pagination.js";
 import { Tabs } from "../../../commons/tabs.js";
-function isUtente(item) {
-    return item.email !== undefined && item.roleId !== undefined;
-}
-function isCommento(item) {
-    return item.postId !== undefined && item.body !== undefined;
-}
+import { isUtente, isCommento } from "../../../../../shared/utils/logic.js";
 // gestisco il cestino del portale
 // posso ripristinare gli elementi o eliminarli per sempre
 export const TrashPage = {

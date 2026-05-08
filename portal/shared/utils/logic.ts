@@ -1,8 +1,9 @@
 // utilità per gestire la logica di filtraggio e ricerca dati
 // serve per pulire il codice delle pagine da calcoli ripetitivi
 
-import { Post } from "../types/models.js";
+import { Post, Utente, Role, Commento } from "../types/models.js";
 
+// interfaccia interna per trovare un nome o titolo partendo dall'id
 interface Namable {
     id: number | string;
     name?: string;
@@ -35,3 +36,15 @@ export const Logic = {
         return trovato ? (trovato.name || trovato.title || fallback) : fallback;
     }
 };
+
+// type guard per verificare se un elemento è un utente
+// usata nel cestino e nella pagina utenti per discriminare i tipi
+export function isUtente(item: Post | Utente | Role | Commento): item is Utente {
+    return (item as Utente).email !== undefined && (item as Utente).roleId !== undefined;
+}
+
+// type guard per verificare se un elemento è un commento
+// usata nel cestino per distinguere i commenti dai post e dai ruoli
+export function isCommento(item: Post | Utente | Role | Commento): item is Commento {
+    return (item as Commento).postId !== undefined && (item as Commento).body !== undefined;
+}

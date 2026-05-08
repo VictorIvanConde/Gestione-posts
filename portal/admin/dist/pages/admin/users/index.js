@@ -8,9 +8,7 @@ import { Form } from "../../../commons/form.js";
 import { Pagination } from "../../../../../shared/components/pagination.js";
 import { Logic } from "../../../../../shared/utils/logic.js";
 import { Toast } from "../../../../../shared/utils/helpers.js";
-function isUtente(item) {
-    return item.email !== undefined;
-}
+import { isUtente } from "../../../../../shared/utils/logic.js";
 // gestisco la pagina degli utenti e dei ruoli
 // a seconda della sezione attiva mostro dati diversi
 export const UsersPage = {
